@@ -1,0 +1,102 @@
+
+body{
+    background-color: #1A1B25;
+    color: #F5F5F5;
+    margin-left: 50px;
+    font-family: "Karma", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.headr{
+    border-bottom: 3px solid #F5F5F5;
+}
+.idea{
+    width:70vw;
+    height:30vh;
+    border-bottom: 1px solid #F5F5F5;
+}
+.idea p{
+
+    font-size: 115%;
+    
+}
+.proto{
+    width:70vw;
+    height:100vh;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20% 50%;
+    grid-template-areas: 
+        "hd hd"
+        "p  img"
+    ;
+
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.proto p{
+    font-size: 115%;
+    grid-area:p;
+}
+
+.proto img{
+    width:110%;
+    height:150%;
+    grid-area: img;
+    object-fit: contain;
+}
+
+.proto h2{
+    grid-area:hd;
+}
+
+.fin{
+    width:70vw;
+    height:30vh;
+}
+.item{
+    margin-top: 40px;
+    width:inherit;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.item a{
+    width:40%;
+    height:40%;
+}
+.item img{
+    width:inherit;
+    height:inherit;
+}
+
+#opnbtn{
+    font-size: 400%;
+    position: fixed;
+    right: 5%;
+    top: 1%;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 11%;
+    right: 5%;
+    background-color: #1A1B25;
+    overflow-x: hidden;
+    transition: 0.5s;
+    
+}
+.sidenav a {
+    height: 100px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F0F2A6;
+    display: block;
+    transition: 0.3s;
+}
+#hm:hover{
+    color:#AA6373
+}
