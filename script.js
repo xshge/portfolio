@@ -83,7 +83,7 @@ function highlightGames(){
             </div>
           
             <div class="item">
-            <a href="Doug.html">
+            <a href="https://xshgames.itch.io/final-prototype">
             <img src="assets/Asset1.png" />
             </a>
              <p>Adventure with Doug</p>
