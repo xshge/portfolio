@@ -24,7 +24,7 @@ body{
     width:70vw;
     height:100vh;
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 30% 70%;
     grid-template-rows: 20% 50%;
     grid-template-areas: 
         "hd hd"
@@ -40,10 +40,16 @@ body{
 }
 
 .proto img{
-    width:110%;
-    height:150%;
-    grid-area: img;
+    
+    width:70%;
+    height:100%;
+   
     object-fit: contain;
+}
+.imgContain{
+    display:flex;
+    gap:30px; 
+    grid-area: img;
 }
 
 .proto h2{
