@@ -76,7 +76,7 @@ function highlightGames(){
     projects.style.background ="linear-gradient(#AA6373 0%,38%,#1A1B25 100%)";
     projects.innerHTML= `
             <div class="item">
-            <a href="https://xshgames.itch.io/the-rat-city">
+            <a href="Rat.html">
             <img src="assets/Asset4.png" />
             </a>
              <p>Rat City</p>

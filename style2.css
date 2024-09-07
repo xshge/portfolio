@@ -15,6 +15,10 @@ body{
     height:50vh;
     border-bottom: 1px solid #F5F5F5;
 }
+
+.idea img{
+    object-fit: contain;
+}
 .idea p{
 
     font-size: 115%;
