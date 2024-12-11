@@ -9,7 +9,7 @@ let type = document.getElementById("titles");
 let G = document.getElementById("game");
 let We = document.getElementById("web");
 let projects = document.querySelector(".projects");
-
+let sectionSelected = false;
 function sleep(ms){
     return new Promise((resolves) =>setTimeout(resolves, ms));
 
@@ -23,15 +23,24 @@ async function titleLoop(){
             let curInstruc = titles[curIndex];
 
                 for (i = 0; i< curInstruc.length; i++){
+                    
+                     if(paused){
+                        break;
+                    }
                     type.innerText = curInstruc.substring(0, i +1);
                     await sleep(waitTime);
+                   
                 }
 
                 await sleep(waitTime * 10);
 
                 for (let i = curInstruc.length; i > 0 ; i--){
+                    if(paused){
+                        break;
+                    }
                     type.innerText = curInstruc.substring(0, i - 1);
                     await sleep(waitTime);
+                    
                 }
 
                 await sleep(waitTime * 5);
@@ -45,10 +54,18 @@ async function titleLoop(){
 
         }else{
 
+                if(val == "ga"){
+                    type.innerText = titles[0];
+                }else{
+                    type.innerText = titles[1];
+                }
+                type.style.color = "#AA6373";
                 await sleep(waitTime * 40);
+                //paused = false;
 
         }
     }
+
 
 }
 
@@ -56,12 +73,14 @@ function determineButtonsClick(){
     
     val = this.value;
     console.log(val);
+    paused = true;
     if(val != null){
         if(val == "ga"){
-        console.log("loadingGames");
-        highlightGames();
+            type.innerText = titles[0];
+            
+            highlightGames();
     }else{
-        console.log("web is clicked");
+        type.innerText = titles[1];
         highlightWeb();
     }}
 

@@ -1,59 +1,71 @@
-
-body{
+body {
     background-color: #1A1B25;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
-    width:100vw;
-    height:100vh;
-    color:#F0F2A6;
+
+    width: 100vw;
+    height: 100vh;
+    color: #F0F2A6;
     font-family: "Karma", serif;
-  font-weight: 300;
-  font-style: normal;
-    
+    font-weight: 300;
+    font-style: normal;
+
 }
-.introHalf{
-    width:50vw;
-    height:100vh;
+
+.introHalf {
+    width: 50vw;
+    height: 100vh;
     margin-left: 10%;
     font-size: 210%;
     position: sticky;
     top: 0px;
+    border-style: dashed;
+    border-color: #F0F2A6;
+    /* border-image: url(assets/border.png);
+    border-image-outset: -100px; */
+    border-left-width: 0px;
+    border-top-width: 0px;
+
+
 }
 
-.otherHalf{
-    width:50vw;
-    height:100vh;
+.otherHalf {
+    width: 50vw;
+    height: 100vh;
     /* float:right; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.header{
-    width:inherit;
-    height:15%;
-    display:flex;
+.header {
+    width: inherit;
+    height: 15%;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
     /* gap:50px; */
-    align-content:flex-end;
-    position:fixed;
-    top:0px;
+    align-content: flex-end;
+    position: fixed;
+    top: 0px;
     background-image: url(assets/header\ back.png);
     background-size: cover;
-   
-}
-.header button{
-     font-size: 110%;
-     font-family: "Karma", serif;
-     font-weight: 300;
-     font-style: normal;
+    border-bottom: 2px solid #F5F5F5;
 }
 
-.header span{
+.header button {
+    font-size: 110%;
+    font-family: "Karma", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.header span {
     font-size: 303%;
     color: #F5F5F5;
     font-weight: 500;
@@ -61,60 +73,144 @@ body{
     font-weight: 300;
     font-style: normal;
 }
-.content{
-    width:inherit;
-    height:95%;
+
+.content {
+    width: 47vw;
+    height: 95%;
     overflow-y: scroll;
-    
+    scrollbar-width: none;
+    overflow-x: hidden;
+    margin: 1rem;
+    color: #F5F5F5;
 }
 
-.content p{
+.content p {
     margin-top: 0px;
-    display:inline;
+    display: inline;
 }
-#titles{
-    display:block;
+
+.content h3 {
+    font-weight: 200;
+    font-size: xx-large;
+    border-bottom: 2px solid #F5F5F5;
+}
+
+#titles {
+    display: block;
     margin-top: 3%;
     font-size: 225%;
-    height:1em;
+    height: 1em;
     font-family: "Karma", serif;
     font-weight: 300;
     font-style: normal;
-    
+
 }
-#game{
-    height:50%;
+
+#game {
+    height: 50%;
     background: transparent;
     border: none;
-    color:#F5F5F5;
+    color: #F5F5F5;
     margin-right: 20px;
 }
 
-#web{
-     height:50%;
+#web {
+    height: 50%;
     background: transparent;
-    border: none;  
-    color:#F5F5F5;
+    border: none;
+    color: #F5F5F5;
     margin-left: 20px;
 }
 
-.projects{
-    display:none;
-    height:inherit;
+.projects {
+    display: none;
+    height: inherit;
     flex-direction: column;
     align-items: center;
     gap: 130px;
     padding-top: 15%;
 }
-.item{
-    display:flex;
+
+#currents {
+    /* width: 47vw; */
+    height: 85%;
+    margin-top: 13%;
+}
+
+.arch {
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+.blog {
+    width: inherit;
+    height: 45%;
+    margin-top: 1rem;
+    border: #F5F5F5;
+    border-style: solid;
+}
+
+.blog h3,
+li {
+    padding-left: 1rem;
+}
+
+.in-the-news {
+    display: grid;
+    width: inherit;
+    height: 45%;
+    grid-template-columns: 10% 90%;
+    grid-auto-rows: min-content;
+    grid-template-areas:
+        "titl titl"
+        "ind new";
+    border-color: #F5F5F5;
+    border-style: solid;
+
+
+}
+
+.in-the-news h3,
+.in-the-news a {
+    padding-left: 1rem;
+
+}
+
+.in-the-news h3 {
+    grid-area: titl;
+    color: #F0F2A6;
+}
+
+.in-the-news a {
+    grid-area: ind;
+}
+
+.in-the-news .new-content {
+    grid-area: new;
+}
+
+.new-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-content a {
+    font-size: xx-large;
+    font-weight: 400;
+}
+
+.item {
+    display: flex;
     width: 50%;
     height: 26%;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-.item img{
+
+.item img {
 
     width: 100%;
     height: 100%;
@@ -122,14 +218,16 @@ body{
     border-radius: 5%;
 
 }
-.item p{
+
+.item p {
     margin-top: 20px;
 }
-.item img:hover{
-    filter:drop-shadow(0 0 0.75rem #F5F5F5);
+
+.item img:hover {
+    filter: drop-shadow(0 0 0.75rem #F5F5F5);
 }
 
-.item a{
+.item a {
     width: 40%;
     height: 100%;
 }
