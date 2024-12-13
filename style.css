@@ -95,6 +95,15 @@ body {
     border-bottom: 2px solid #F5F5F5;
 }
 
+a {
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
+a:hover {
+    color: #F0F2A6;
+}
+
 #titles {
     display: block;
     margin-top: 3%;

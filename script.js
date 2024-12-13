@@ -1,5 +1,5 @@
 
-let titles = ["Game Designer","Web Developer"];
+let titles = ["Game Designer", "Web Developer"];
 
 let waitTime = 100;
 let paused = false;
@@ -10,58 +10,58 @@ let G = document.getElementById("game");
 let We = document.getElementById("web");
 let projects = document.querySelector(".projects");
 let sectionSelected = false;
-function sleep(ms){
-    return new Promise((resolves) =>setTimeout(resolves, ms));
+function sleep(ms) {
+    return new Promise((resolves) => setTimeout(resolves, ms));
 
 }
 
-async function titleLoop(){
-    while(true){
+async function titleLoop() {
+    while (true) {
         console.log("called");
-        if(!paused){
-            
+        if (!paused) {
+
             let curInstruc = titles[curIndex];
 
-                for (i = 0; i< curInstruc.length; i++){
-                    
-                     if(paused){
-                        break;
-                    }
-                    type.innerText = curInstruc.substring(0, i +1);
-                    await sleep(waitTime);
-                   
+            for (i = 0; i < curInstruc.length; i++) {
+
+                if (paused) {
+                    break;
                 }
+                type.innerText = curInstruc.substring(0, i + 1);
+                await sleep(waitTime);
 
-                await sleep(waitTime * 10);
+            }
 
-                for (let i = curInstruc.length; i > 0 ; i--){
-                    if(paused){
-                        break;
-                    }
-                    type.innerText = curInstruc.substring(0, i - 1);
-                    await sleep(waitTime);
-                    
+            await sleep(waitTime * 10);
+
+            for (let i = curInstruc.length; i > 0; i--) {
+                if (paused) {
+                    break;
                 }
+                type.innerText = curInstruc.substring(0, i - 1);
+                await sleep(waitTime);
 
-                await sleep(waitTime * 5);
+            }
 
-                //cycling phrases that I have. 
-                if(curIndex === titles.length -1){
-                    curIndex = 0;
-                }else{
-                    curIndex++;
-                }
+            await sleep(waitTime * 5);
 
-        }else{
+            //cycling phrases that I have. 
+            if (curIndex === titles.length - 1) {
+                curIndex = 0;
+            } else {
+                curIndex++;
+            }
 
-                if(val == "ga"){
-                    type.innerText = titles[0];
-                }else{
-                    type.innerText = titles[1];
-                }
-                type.style.color = "#AA6373";
-                await sleep(waitTime * 40);
-                //paused = false;
+        } else {
+
+            if (val == "ga") {
+                type.innerText = titles[0];
+            } else {
+                type.innerText = titles[1];
+            }
+            type.style.color = "#AA6373";
+            await sleep(waitTime * 40);
+            //paused = false;
 
         }
     }
@@ -69,31 +69,40 @@ async function titleLoop(){
 
 }
 
-function determineButtonsClick(){
-    
+function determineButtonsClick() {
+
     val = this.value;
-    console.log(val);
+    curr = document.getElementById("currents");
+    curr.style.display = "none";
     paused = true;
-    if(val != null){
-        if(val == "ga"){
+    if (val != null) {
+        if (val == "ga") {
             type.innerText = titles[0];
-            
+
             highlightGames();
-    }else{
-        type.innerText = titles[1];
-        highlightWeb();
-    }}
-
+        } else {
+            type.innerText = titles[1];
+            highlightWeb();
+        }
     }
-    
 
-function highlightGames(){
+}
+
+
+function highlightGames() {
     // paused = true;
-    G.style.background= "#AA6373";
-    We.style.background="transparent";
-    projects.style.display ="flex";
-    projects.style.background ="linear-gradient(#AA6373 0%,38%,#1A1B25 100%)";
-    projects.innerHTML= `
+    G.style.background = "#AA6373";
+    We.style.background = "transparent";
+    projects.style.display = "flex";
+    projects.style.background = "linear-gradient(#AA6373 0%,38%,#1A1B25 100%)";
+    projects.innerHTML = `
+             <div class="item">
+            <a href="project_pages/GalaxBrain.html">
+            <img src="assets/brainAsset.png" />
+            </a>
+             <p>Galaxy Brain</p>
+            </div>
+
             <div class="item">
             <a href="Rat.html">
             <img src="assets/Asset4.png" />
@@ -113,22 +122,22 @@ function highlightGames(){
 }
 
 // function values(){
-        
+
 // }
 
 G.addEventListener("click", determineButtonsClick);
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     titleLoop();
 })
 
-function highlightWeb(){
+function highlightWeb() {
 
-    We.style.background="#AA6373";
+    We.style.background = "#AA6373";
     G.style.background = "transparent";
-    projects.style.display ="flex";
-    projects.style.background ="linear-gradient(#AA6373 0%,20%,#1A1B25 100%)";
-    projects.innerHTML= `
+    projects.style.display = "flex";
+    projects.style.background = "linear-gradient(#AA6373 0%,20%,#1A1B25 100%)";
+    projects.innerHTML = `
 
             <div class="item">
             <a href="Ast_M.html">
