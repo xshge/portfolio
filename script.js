@@ -104,7 +104,7 @@ function highlightGames() {
             </div>
 
             <div class="item">
-            <a href="Rat.html">
+            <a href="project_pages/Rat.html">
             <img src="assets/Asset4.png" />
             </a>
              <p>Rat City</p>
@@ -121,14 +121,16 @@ function highlightGames() {
     // type.innerText = titles[0];
 }
 
-// function values(){
 
-// }
 
 G.addEventListener("click", determineButtonsClick);
 
 document.addEventListener("DOMContentLoaded", function () {
     titleLoop();
+    document.querySelector(".introHalf").addEventListener("click", function () {
+        // alert("reloading page");
+        window.location.reload();
+    });
 })
 
 function highlightWeb() {
@@ -140,7 +142,7 @@ function highlightWeb() {
     projects.innerHTML = `
 
             <div class="item">
-            <a href="Ast_M.html">
+            <a href="project_pages/Ast_M.html">
             <img src="assets/Asset3.png" />
             </a>
             <p>Astro-movies</p>
@@ -148,7 +150,7 @@ function highlightWeb() {
            
 
             <div class="item">
-            <a href="Oyster.html">
+            <a href="project_pages/Oyster.html">
             <img src="assets/Asset2.png" />
             </a>
             <P>NYC Oyster Projects</P> 
