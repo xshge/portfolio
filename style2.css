@@ -43,6 +43,12 @@ p a {
     border-bottom: 1px solid #F5F5F5;
 }
 
+.sub-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .project-left {
     width: 40vw;
     border-bottom: 1px solid #F5F5F5;
