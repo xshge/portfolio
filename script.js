@@ -140,6 +140,12 @@ function highlightWeb() {
     projects.style.display = "flex";
     projects.style.background = "linear-gradient(#AA6373 0%,20%,#1A1B25 100%)";
     projects.innerHTML = `
+            <div class="item">
+            <a href="project_pages/Gestures.html">
+            <img src="assets/hand.png" />
+            </a>
+            <p>Gesture-Kaleidscope</p>
+            </div>
 
             <div class="item">
             <a href="project_pages/Ast_M.html">
