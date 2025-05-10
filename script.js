@@ -1,5 +1,5 @@
 
-let titles = ["Game Designer", "Web Developer"];
+let titles = ["Game Designer", " UX/Web Developer"];
 
 let waitTime = 100;
 let paused = false;
@@ -140,9 +140,16 @@ function highlightWeb() {
     projects.style.display = "flex";
     projects.style.background = "linear-gradient(#AA6373 0%,20%,#1A1B25 100%)";
     projects.innerHTML = `
+             <div class="item">
+            <a href="project_pages/Pt.html">
+            <img src="assets/FrameL.png" />
+            </a>
+            <p>Playful Tutorial</p>
+            </div>
+
             <div class="item">
             <a href="project_pages/Gestures.html">
-            <img src="assets/hand.png" />
+            <img src="assets/hand2.png"/>
             </a>
             <p>Gesture-Kaleidscope</p>
             </div>

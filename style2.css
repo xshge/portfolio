@@ -112,6 +112,10 @@ p a {
     position: relative;
 }
 
+.topS {
+    padding-top: 1rem;
+}
+
 .pre-mid {
     grid-area: pmd;
 }
@@ -161,6 +165,10 @@ p a {
     float: none;
     margin-bottom: 2.5em;
     /* grid-area: p; */
+}
+
+#imgMod {
+    height: 25vh;
 }
 
 .sideimg {
