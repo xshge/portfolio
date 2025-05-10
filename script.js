@@ -154,13 +154,6 @@ function highlightWeb() {
             <p>Astro-movies</p>
             </div>
            
-
-            <div class="item">
-            <a href="project_pages/Oyster.html">
-            <img src="assets/Asset2.png" />
-            </a>
-            <P>NYC Oyster Projects</P> 
-            </div>
     `;
 
 }
